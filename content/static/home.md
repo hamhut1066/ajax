@@ -12,4 +12,3 @@ want to read
 ----
 ####[Quotes](/quotes.md)
 Some random quotes that I've come across and decided I like 
-_except the footer itself_

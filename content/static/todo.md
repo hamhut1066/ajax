@@ -1,6 +1,9 @@
 #TODO
 _[notes](#notes)_
 
+- javascript will not be the backbone of the website, but will now override
+  links so that if javascript is disabled, then one can still navigate the site
+
 - Add a back button on all pages that automatically calls popstack()
 - add a sitemap so I don't randomly lose files 
 

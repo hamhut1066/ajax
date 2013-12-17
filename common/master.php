@@ -3,8 +3,8 @@
 #includes up at the top so they are easy to find
 #and global variables
 define(COMMON, "/srv/ajax/common");
-define('PATH_TO_CONTENT', "/srv/ajax/content");
 require('Parsedown.php');
+require('helpers.php');
 ?>
 <html lang="en">
     <?php require('header.php'); ?>
@@ -25,11 +25,7 @@ require('Parsedown.php');
 <span id="content">
 <!--the content of the page -->
 <?php
-    #echo PATH_TO_CONTENT."$uri";
-    $text = file_get_contents(PATH_TO_CONTENT."/static$uri");
-    if ($text == ""){ $text = file_get_contents(PATH_TO_CONTENT."/static/index.md"); } 
-    $result = Parsedown::instance()->parse($text);
-    echo $result;
+    echo rendermd($uri);
 ?>
 </span>
 </div>
