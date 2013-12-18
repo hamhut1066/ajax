@@ -10,14 +10,33 @@ $( document ).ready( function() {
     $(document).on("click", ".click", function() {
         
         loadpage($(this).attr("href"));
+        $("a").parent().removeClass("active");
+        $(this).parent().toggleClass("active");
         return false;//disables navigation to the new page
     });
 
-    //attempt to get the back button to work
+    //this is a simple function that fixes the dropdown from staying open
+    $(".dropdown-menu").on("mouseleave", function() {
+        $(this).closest("li").removeClass("open active");
+    });
+
+
+    //a simple function for going back on the website
+
+    $(window).bind('popstate', function(event) {
+        var state = event.originalEvent.state;
+        if(state !== null){
+            if(state.url !== undefined){
+                loadpage(state.url);
+            }
+        }
+    });
+    
 });
 
 function loadpage(dest) {
     // add logic to get rid of the # symbol at the beginning
+    if(dest == "#") { return 0; }
     $.ajax({
         type: "GET",
         data: "page="+dest,
@@ -26,8 +45,7 @@ function loadpage(dest) {
             //this is where the content is loaded
             $("#content").html(data);
             $("#title").html(dest);
-            var stateObj = { foo: "." };
-            history.pushState(stateObj, "unknown", dest);
+            history.pushState({url: dest} , "unknown", dest);
             //TODO figure out how to add history to avax calls
         }
     });

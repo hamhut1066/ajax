@@ -1,5 +1,5 @@
 ##Notes 
-_[reload](#notes)_  
+_[reload](/notes.md)_  
 _notes on how my website is progressing, where it's been and why I chose the
 direction I am currently headed_
 

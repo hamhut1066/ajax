@@ -1,5 +1,5 @@
 #TODO
-_[notes](#notes)_
+_[notes](/notes.md)_
 
 - javascript will not be the backbone of the website, but will now override
   links so that if javascript is disabled, then one can still navigate the site
