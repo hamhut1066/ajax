@@ -13,6 +13,9 @@ __Personal Summary__
 - Keen to learn and become proficient in new skills  
 - British Nationality  
 
+I am a fast learning, technologically passionate individual and would love to
+share my passion and knowledge with other people.
+
 ----
 
 __Education__  
@@ -35,6 +38,11 @@ Pembroke House School: September 1999 - July 2006  (Kenya)
 ----
 
 __Experience__  
+- 3 Month Internship at X-RM in Winchester  
+- 3 Months Laying Fibre-Optics in Kenya.  
+- Hackathon, where we had to develop a proof of concept ap around the idea of
+security  
+- 2 weeks bar work over new years in Edinburgh
 - 1 Month Cookery course at The Grange Cookery School  
 - Level 2 in food safety and catering  
 - 3 months Waiting in South Africa (Weekends)  
@@ -42,10 +50,6 @@ __Experience__
 - Kenyan Drivers  
 - I am proficient with mathematics and logistics.  
 - 3 Month work at a pub in Wales  
-- 3 Month Internship at X-RM in Winchester  
-- 3 Months Laying Fibre-Optics in Kenya.  
-- Hackathon, where we had to develop a proof of concept ap around the idea of
-security  
 
 ----
 
