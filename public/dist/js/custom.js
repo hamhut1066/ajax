@@ -43,10 +43,12 @@ function loadpage(dest) {
         url: "/ajax/content.php",
         success: function(data) { //if there is a successful reply
             //this is where the content is loaded
-            $("#content").html(data);
-            $("#title").html(dest);
+            obj = JSON.parse(data);
+            //$("#content").html(data);
+            $("#content").html(obj.content);
+            $("#title").html(obj.title);
             history.pushState({url: dest} , "unknown", dest);
-            //TODO figure out how to add history to avax calls
+            //TODO figure out how to add history to ajax calls
         }
     });
     return 0;

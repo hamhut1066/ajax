@@ -1,5 +1,4 @@
 ##Notes 
-_[reload](/notes.md)_  
 _notes on how my website is progressing, where it's been and why I chose the
 direction I am currently headed_
 
@@ -10,6 +9,7 @@ I rewrote the website to use ajax because I thought it would be fun to know the
 basics of how ajax works...  
 also so I can stream music from my site, while
 navigating it, uninterrupted.
+- this isn't working at the moment as I have nothing to stream off...
 
 ----
 ###Content Structure

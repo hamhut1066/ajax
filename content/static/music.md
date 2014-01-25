@@ -1,3 +1,4 @@
+[//]: Music
 ##My Music
 
 _this is a list of my my favourite music, or music that interests me_
@@ -5,8 +6,7 @@ _links included (if possible) so that I can find them again_
 
 ----
 ###To Pursue
-- Tom Middleton and Mark Prichard - Global Communication
-    - http://vimeo.com/19630195
+- Tom Middleton and Mark Prichard - [Global Communication](http://vimeo.com/19630195)
 
 ----
 [Pretty Lights](http://prettylightsmusic.com) (they also use html5!)

@@ -13,7 +13,7 @@ author of _I Robot_ and _the foundation_ series.
 
 ----
 ###Philip Pullman
-This just needs to be added, _his dark materials_ was such a great series, and
+This just needs to be added, _his dark materials_ was such a great series, and 
 totally worth reading.
 - Northen Lights
 - Subtle Knife

@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title id="title"><?php echo $uri ?></title>
+    <title id="title"><?php echo heading($uri); ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/dist/css/bootstrap.css" rel="stylesheet">
