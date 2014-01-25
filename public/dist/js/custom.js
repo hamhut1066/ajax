@@ -1,10 +1,9 @@
 //custom js code
-
-
 $( document ).ready( function() {
 
     //this is added so that I can hijack clicks and use ajax instead
     $("a").toggleClass("click");
+    $("#station-name").removeClass("click");
 
     //this captures any clicks on links
     $(document).on("click", ".click", function() {
@@ -32,7 +31,37 @@ $( document ).ready( function() {
         }
     });
     
+    //start of radio controlled stuff
+    $(".station").click( function() {
+        //set new channel!!
+        var a = $(this).find("a")
+        var station = a.attr("station-id");
+        changeSrc(station);
+        var name = a.text();
+        $("#station-name").text(name);
+        $("#station-name").removeClass("disabled");
+    });
+    $("#station-name").click( function() {
+        $(this).toggleClass("btn-info");
+        var audio = $("#radio");
+          if (audio[0].paused == false) {
+                audio[0].pause();
+            } else {
+                audio[0].play();
+            }
+        console.log("click");
+    });
 });
+function changeSrc(sourceUrl) {
+        var audio = $("#radio");      
+        $("#ogg_src").attr("src", sourceUrl);
+        /****************/
+        audio[0].pause();
+        audio[0].load();//suspends and restores all audio element
+        audio[0].play();
+        $("#station-name").addClass("btn-info");
+        /****************/
+}
 
 function loadpage(dest) {
     // add logic to get rid of the # symbol at the beginning
