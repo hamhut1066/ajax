@@ -34,7 +34,6 @@ require('helpers.php');
 </span>
 </div>
 <div class="col-xs-2">
-<!--script src="http://workinstartups.com/api/api.php?action=getJobs&type=parttime&category=0&count=10&random=0&days_behind=0&response=json&city=81"   type="text/javascript"></script> <script type="text/javascript">showJobs('jobber-container', 'jobber-list');</script-->
 </div>
 </div>
 </div>
