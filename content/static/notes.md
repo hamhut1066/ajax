@@ -1,3 +1,4 @@
+[//]: Notes
 ##Notes 
 _notes on how my website is progressing, where it's been and why I chose the
 direction I am currently headed_

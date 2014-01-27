@@ -1,3 +1,4 @@
+[//]: Contacts
 Welcome to the contacts page
 ============================
 <h1 class="text-hide">Hello World</h1>
