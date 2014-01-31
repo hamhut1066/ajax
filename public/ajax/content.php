@@ -2,6 +2,9 @@
 define('PATH_TO_WEBROOT', "/srv/ajax/common");
 define('PATH_TO_CONTENT', "/srv/ajax/content");
 
+#TODO add checking here to stop any malicious code injection
+
+
 require(PATH_TO_WEBROOT.'/Parsedown.php');
 require(PATH_TO_WEBROOT.'/helpers.php');
 
@@ -10,9 +13,10 @@ require(PATH_TO_WEBROOT.'/helpers.php');
 #retrieve dest from get
 $uri  = $_GET["page"];
 
-#read markdown into variable and parse into html
+#read text into variable and parse into html
 $text = file_get_contents(PATH_TO_CONTENT."/static$uri");
 if ($text == ""){ $text = file_get_contents(PATH_TO_CONTENT."/404.md"); } 
+
 $result = Parsedown::instance()->parse($text);
 $title = heading($uri);
 

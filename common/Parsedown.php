@@ -676,7 +676,7 @@ class Parsedown
 				{
 					$element_text = $this->parse_span_elements($matches[3]);
 
-					$element = '<a class=\'click\' dest=\''.$url.'\' href=\''.$url.'\'>'.$element_text.'</a>';
+					$element = '<a dest=\''.$url.'\' href=\''.$url.'\'>'.$element_text.'</a>';
 				}
 
 				# ~

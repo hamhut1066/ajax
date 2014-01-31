@@ -32,7 +32,7 @@
 <div class="col-xs-2">
 <p class="text-muted credit">
 <!---a class="btn btn-default" href="#top">top</a-->
-<a class="btn btn-info click" href="/home.md">home</a>
+<a class="btn btn-info" href="/home.md">home</a>
 </p>
 </div>
 </div>

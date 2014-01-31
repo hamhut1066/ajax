@@ -2,7 +2,7 @@
 <?php
 #includes up at the top so they are easy to find
 #and global variables
-define(COMMON, "/srv/ajax/common");
+define('COMMON', "/srv/ajax/common");
 require('config.php');
 require('Parsedown.php');
 require('helpers.php');

@@ -2,7 +2,7 @@
 $( document ).ready( function() {
 
     //this is added so that I can hijack clicks and use ajax instead
-    $("a").toggleClass("click");
+    $(".local").addClass("click");
     $("#station-name").removeClass("click");
 
     //this captures any clicks on links
@@ -49,7 +49,7 @@ $( document ).ready( function() {
             } else {
                 audio[0].play();
             }
-        console.log("click");
+        //console.log("click");
     });
 });
 function changeSrc(sourceUrl) {
