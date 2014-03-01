@@ -2,6 +2,9 @@
 #TODO
 _[notes](/notes.md)_
 
+- need to do stuff that will let me mouse over scrobbles to give me an idea of
+  what's going on!!!
+
 - javascript will not be the backbone of the website, but will now override
   links so that if javascript is disabled, then one can still navigate the site
 

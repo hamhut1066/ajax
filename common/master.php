@@ -34,6 +34,9 @@ require('helpers.php');
 </span>
 </div>
 <div class="col-xs-2">
+<!-- scrobbles -->
+<a href="http://www.last.fm/user/hamhut1066"><span class="text">Latest Scrobbles</span></a>
+<ul id="scrobbles"></ul>
 </div>
 </div>
 </div>

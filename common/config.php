@@ -8,5 +8,5 @@ define('PATH_TO_CONTENT', "/srv/ajax/content");
 $heading = "Hamish's Blog";
 
 # subtext for website
-$lead = "a blog containing bias and ridicule";
+$lead = "Hamish's awesome blog";
 ?>

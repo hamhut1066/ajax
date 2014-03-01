@@ -25,7 +25,8 @@
                 <li class="station"><a href="#" station-id="http://pub1.di.fm/di_lounge?c2b5c3437ececfa093fcea7c" img="58f7afca5a6883c063f8642bfd2cef80">Lounge</a></li>
               </ul>
             </li>
-            <li class="btn navbar-right">
+            <li class="">
+            <a href="#"><span id="last-scrobble"></span></a>
             </li>
           </ul>
         </ul>

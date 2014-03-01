@@ -676,7 +676,14 @@ class Parsedown
 				{
 					$element_text = $this->parse_span_elements($matches[3]);
 
-					$element = '<a dest=\''.$url.'\' href=\''.$url.'\'>'.$element_text.'</a>';
+                    if (strpos($url, "hamhut1066.com") !== false || strpos($url, "/") == 0)
+                    {
+                        $element = '<a class=\'local\' href=\''.$url.'\'>'.$element_text.'</a>';
+                    }
+                    else
+                    {
+                        $element = '<a href=\''.$url.'\'>'.$element_text.'</a>';
+                    }
 				}
 
 				# ~

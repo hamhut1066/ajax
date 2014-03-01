@@ -2,11 +2,11 @@
 $( document ).ready( function() {
 
     //this is added so that I can hijack clicks and use ajax instead
-    $(".local").addClass("click");
+    //$(".local").addClass("click");
     $("#station-name").removeClass("click");
 
     //this captures any clicks on links
-    $(document).on("click", ".click", function() {
+    $(document).on("click", ".local", function() {
         
         loadpage($(this).attr("href"));
         $("a").parent().removeClass("active");
@@ -51,6 +51,7 @@ $( document ).ready( function() {
             }
         //console.log("click");
     });
+    rss("http://ws.audioscrobbler.com/2.0/user/hamhut1066/recenttracks.rss",meh);
 });
 function changeSrc(sourceUrl) {
         var audio = $("#radio");      
@@ -81,4 +82,20 @@ function loadpage(dest) {
         }
     });
     return 0;
+}
+function rss(url, callback) {
+        $.ajax({
+                url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+            dataType: 'json',
+            success: function(data) {
+                    callback(data.responseData.feed);
+                        }
+        });
+}
+function meh(data) {
+    console.log(data);
+    $("#last-scrobble").text(data.entries[0].title);
+    for (var i = 0; i < data.entries.length; i++) {
+    $("#scrobbles").append("<li class='text-muted'>"+data.entries[i].title.slice(0,10)+"...</li>");
+    }
 }

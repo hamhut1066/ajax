@@ -20,11 +20,6 @@
 <div class="hidden-print container navbar navbar-fixed-bottom">
 <div class="row">
 <div class="col-xs-2">
-            <li class="btn navbar-right">
-                <audio id="radio">
-                    <source id="ogg_src" src="#" type="audio/mpeg" />
-                </audio>
-            </li>
 <i><p>Hosted By <a href="https://www.digitalocean.com/?refcode=07d1d049a0cc">Digital Ocean</a></p></i>
 </div>
 <div class="col-xs-8">
