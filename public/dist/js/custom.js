@@ -19,6 +19,11 @@ $( document ).ready( function() {
         $(this).closest("li").removeClass("open active");
     });
 
+    $("#last-scrobble").on("click", function() {
+        console.log("click");
+        rss("http://ws.audioscrobbler.com/3.0/user/hamhut1066/recenttracks.rss");
+    });
+
 
     //a simple function for going back on the website
 
@@ -51,7 +56,7 @@ $( document ).ready( function() {
             }
         //console.log("click");
     });
-    rss("http://ws.audioscrobbler.com/2.0/user/hamhut1066/recenttracks.rss",meh);
+    rss("http://ws.audioscrobbler.com/3.0/user/hamhut1066/recenttracks.rss");
 });
 function changeSrc(sourceUrl) {
         var audio = $("#radio");      
@@ -83,19 +88,56 @@ function loadpage(dest) {
     });
     return 0;
 }
-function rss(url, callback) {
-        $.ajax({
-                url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-            dataType: 'json',
-            success: function(data) {
-                    callback(data.responseData.feed);
-                        }
-        });
+function rss(url) {
+    $("#scrobbles").empty();
+    $.get("http://ws.audioscrobbler.com/2.0/user/hamhut1066/recenttracks.rss", 
+            function(data) { 
+                recent = xmlToJson(data).rss.channel.item; 
+                $("#last-scrobble").text(recent[0].title["#text"]);
+                i = 0;
+                recent.forEach(function(e) { 
+                    title = e.title["#text"];
+                    $("#scrobbles").append("<li music-id='"+i+"' data-toggle='tooltip' class='text-muted musictool' title='"+title+"'>"+title.substring(0,10)+"...</li>");
+                    i+=1;
+                }); 
+                $('.musictool').tooltip();
+            });
 }
-function meh(data) {
-    console.log(data);
-    $("#last-scrobble").text(data.entries[0].title);
-    for (var i = 0; i < data.entries.length; i++) {
-    $("#scrobbles").append("<li class='text-muted'>"+data.entries[i].title.slice(0,10)+"...</li>");
-    }
-}
+// Changes XML to JSON
+function xmlToJson(xml) {
+	
+	// Create the return object
+	var obj = {};
+
+	if (xml.nodeType == 1) { // element
+		// do attributes
+		if (xml.attributes.length > 0) {
+		obj["@attributes"] = {};
+			for (var j = 0; j < xml.attributes.length; j++) {
+				var attribute = xml.attributes.item(j);
+				obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+			}
+		}
+	} else if (xml.nodeType == 3) { // text
+		obj = xml.nodeValue;
+	}
+
+	// do children
+	if (xml.hasChildNodes()) {
+		for(var i = 0; i < xml.childNodes.length; i++) {
+			var item = xml.childNodes.item(i);
+			var nodeName = item.nodeName;
+			if (typeof(obj[nodeName]) == "undefined") {
+				obj[nodeName] = xmlToJson(item);
+			} else {
+				if (typeof(obj[nodeName].push) == "undefined") {
+					var old = obj[nodeName];
+					obj[nodeName] = [];
+					obj[nodeName].push(old);
+				}
+				obj[nodeName].push(xmlToJson(item));
+			}
+		}
+	}
+	return obj;
+};
