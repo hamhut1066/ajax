@@ -5,8 +5,8 @@
 define('PATH_TO_CONTENT', "/srv/ajax/content");
 
 # the heading of the website
-$heading = "Hamish's Blog";
+$heading = "Random Website #1";
 
 # subtext for website
-$lead = "Hamish's awesome blog";
+$lead = "plus points for the randomness of this site";
 ?>

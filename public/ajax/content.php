@@ -13,11 +13,7 @@ require(PATH_TO_WEBROOT.'/helpers.php');
 #retrieve dest from get
 $uri  = $_GET["page"];
 
-#read text into variable and parse into html
-$text = file_get_contents(PATH_TO_CONTENT."/static$uri");
-if ($text == ""){ $text = file_get_contents(PATH_TO_CONTENT."/404.md"); } 
-
-$result = Parsedown::instance()->parse($text);
+$result = rendermd($uri);
 $title = heading($uri);
 
 $return = '{"content": "'.$result.'", "title": "'.$title.'"}';

@@ -6,15 +6,15 @@ function rendermd($uri) {
     $text = "";
     $result = "";
     try {
-        if (strpos($uri,".") === FALSE){
+        if (strpos($uri,".") != FALSE){
             $text = file_get_contents(PATH_TO_CONTENT."/static$uri");
         }
-        if ($text == "") {throw new Exception("blargh");};
+        if ($text == "") {throw new Exception("");};
     }catch (Exception $e) {
-        $text = file_get_contents(PATH_TO_CONTENT."/404.md");
+        $text = file_get_contents(PATH_TO_CONTENT."/home.md");
     }
     $result = Parsedown::instance()->parse($text);
-    return $result;
+    return $result; #$result;
 }
 
 #TODO add functionality to use the filename if no name is specified

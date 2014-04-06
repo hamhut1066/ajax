@@ -9,6 +9,7 @@ $( document ).ready( function() {
     $(document).on("click", ".local", function() {
         
         loadpage($(this).attr("href"));
+        $("#last-scrobble").text($(this).attr("href"));
         $("a").parent().removeClass("active");
         $(this).parent().toggleClass("active");
         return false;//disables navigation to the new page
@@ -20,7 +21,6 @@ $( document ).ready( function() {
     });
 
     $("#last-scrobble").on("click", function() {
-        console.log("click");
         rss("http://ws.audioscrobbler.com/3.0/user/hamhut1066/recenttracks.rss");
     });
 
@@ -93,7 +93,7 @@ function rss(url) {
     $.get("http://ws.audioscrobbler.com/2.0/user/hamhut1066/recenttracks.rss", 
             function(data) { 
                 recent = xmlToJson(data).rss.channel.item; 
-                $("#last-scrobble").text(recent[0].title["#text"]);
+                //$("#last-scrobble").text(recent[0].title["#text"]);
                 i = 0;
                 recent.forEach(function(e) { 
                     title = e.title["#text"];
