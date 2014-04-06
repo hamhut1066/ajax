@@ -13,16 +13,12 @@
           <ul class="nav navbar-nav">
             <li ><a class="local" href="/feed.md">Feed</a></li>
             <li ><a class="local" href="/notes.md">Notes</a></li>
-            <li><a href="#" id="station-name" class="btn disabled">Select Station</a></li>
         <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a class="local" href="#">Action</a></li>
                 <li><a class="local" href="/work.md">Uni Work</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Stations</li>
-                <li class="station"><a href="#" station-id="http://pub1.di.fm/di_vocaltrance?c2b5c3437ececfa093fcea7c" img="009b4fcdb032cceee6f3da5efd4a86e9">Vocal Trance</a></li>
-                <li class="station"><a href="#" station-id="http://pub1.di.fm/di_lounge?c2b5c3437ececfa093fcea7c" img="58f7afca5a6883c063f8642bfd2cef80">Lounge</a></li>
               </ul>
             </li>
             <li class="">
