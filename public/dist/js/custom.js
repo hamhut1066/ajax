@@ -1,4 +1,5 @@
 //custom js code
+var jenni;
 $( document ).ready( function() {
 
     //this is added so that I can hijack clicks and use ajax instead
@@ -9,7 +10,6 @@ $( document ).ready( function() {
     $(document).on("click", ".local", function() {
         
         loadpage($(this).attr("href"));
-        $("#last-scrobble").text($(this).attr("href"));
         $("a").parent().removeClass("active");
         $(this).parent().toggleClass("active");
         return false;//disables navigation to the new page
@@ -21,7 +21,8 @@ $( document ).ready( function() {
     });
 
     $("#last-scrobble").on("click", function() {
-        rss("http://ws.audioscrobbler.com/3.0/user/hamhut1066/recenttracks.rss");
+        jenni = rss("http://ws.audioscrobbler.com/3.0/user/hamhut1066/recenttracks.rss");
+
     });
 
 
@@ -75,7 +76,7 @@ function loadpage(dest) {
     $.ajax({
         type: "GET",
         data: "page="+dest,
-        url: "/ajax/content.php",
+        url: "/api/page.php",
         success: function(data) { //if there is a successful reply
             //this is where the content is loaded
             obj = JSON.parse(data);
@@ -90,10 +91,10 @@ function loadpage(dest) {
 }
 function rss(url) {
     $("#scrobbles").empty();
-    $.get("http://ws.audioscrobbler.com/2.0/user/hamhut1066/recenttracks.rss", 
+    return $.get("http://ws.audioscrobbler.com/2.0/user/hamhut1066/recenttracks.rss", 
             function(data) { 
                 recent = xmlToJson(data).rss.channel.item; 
-                //$("#last-scrobble").text(recent[0].title["#text"]);
+                $("#last-scrobble").text(recent[0].title["#text"]);
                 i = 0;
                 recent.forEach(function(e) { 
                     title = e.title["#text"];

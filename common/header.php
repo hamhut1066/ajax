@@ -8,10 +8,10 @@
     <title id="title"><?php echo heading($uri); ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/dist/css/bootstrap.css" rel="stylesheet" media="all">
 
     <!-- Custom styles for this template -->
-    <link href="dist/css/starter-template.css" rel="stylesheet">
+    <link href="dist/css/starter-template.css" rel="stylesheet" media="all">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

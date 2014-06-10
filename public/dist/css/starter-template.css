@@ -12,3 +12,7 @@ audio {
 .btn-info {
     background-color: #636363 !important;
 }
+.break {
+    page-break-after:always;
+    page-break-inside:avoid;
+}

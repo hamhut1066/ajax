@@ -22,8 +22,8 @@
 	<div class="col-xs-2">
 	  <div class="hidden-print">
 	    <!-- I can now add random things in here If I feel so inclined -->
-	    <p>>.<</p>
-		    </div>
+        <p>>.<</p>
+      </div>
 	</div>
 	<div class="col-xs-8">
 	  <span id="content">
@@ -33,7 +33,7 @@
 	       ?>
 	  </span>
 	</div>
-	<div class="col-xs-2">
+	<div class="col-xs-2 hidden-print">
 	  <!-- scrobbles -->
 	  <a href="http://www.last.fm/user/hamhut1066"><span class="text">Latest Scrobbles</span></a>
 	  <ul id="scrobbles"></ul>
