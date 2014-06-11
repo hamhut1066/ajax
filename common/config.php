@@ -2,7 +2,7 @@
 ####################
 # global variables #
 ####################
-$PATH_TO_CONTENT = "/home/moredhel/Documents/hamhut1066.com";
+define("PATH", "/home/moredhel/Documents/hamhut1066.com");
 
 # the heading of the website
 $heading = "Random Website #1";

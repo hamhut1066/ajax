@@ -7,21 +7,22 @@ function rendermd($uri) {
     $result = "";
     try {
         if (strpos($uri,".") != FALSE){
-            $text = file_get_contents(PATH_TO_CONTENT."/static$uri");
+            $text = file_get_contents(PATH."/$uri");
         }
         if ($text == "") {throw new Exception("");};
     }catch (Exception $e) {
-        $text = file_get_contents(PATH_TO_CONTENT."/home.md");
+        $text = file_get_contents(PATH."/home.md");
     }
     $result = Parsedown::instance()->parse($text);
     return $result; #$result;
 }
 
-#TODO add functionality to use the filename if no name is specified
 function heading($uri) {
-    $f = fopen(PATH_TO_CONTENT."/static$uri", 'r');
-    $line = fgets($f);
-    fclose($f);
-    list($_, $title) = explode(": ", $line);
-    return $title;
+    $x = explode("/", "$uri");
+
+    if(sizeof($x) == 2 and $x[1] == "") {
+        //root directory
+        return "Home";
+    }
+    else { return ucwords($x[1]); }
 }
