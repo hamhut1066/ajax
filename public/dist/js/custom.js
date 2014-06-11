@@ -2,6 +2,12 @@
 var jenni;
 $( document ).ready( function() {
     //this is a simple function that fixes the dropdown from staying open
+    $(".note").on("click", function() {
+        $(".modal-title").text(this.innerHTML);
+        $(".modal-body").html("loading...");
+        notes.getNote(this.innerHTML);
+        $("#myModal").modal();
+    });
     $(".dropdown-menu").on("mouseleave", function() {
         $(this).closest("li").removeClass("open active");
     });

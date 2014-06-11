@@ -9,6 +9,22 @@
    ?>
 
 <html lang="en">
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>Body</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
   <?php require('header.php'); ?>
   <body>
     <a id="top" ref="#"></a>
@@ -16,8 +32,8 @@
 
     <div id="main" class="container clear-top">
       <div class="hidden-print starter-template">
-	<h1><?php echo $heading; ?></h1>
-	<p class="text-muted lead"><?php echo $lead; ?></p>
+	<h1><?php echo heading; ?></h1>
+	<p class="text-muted lead"><?php echo lead; ?></p>
       </div>
       <div class="row">
 	<div class="col-xs-2">
@@ -35,7 +51,7 @@
 	</div>
 	<div class="col-xs-2 hidden-print">
 	  <!-- scrobbles -->
-	  <a href="http://www.last.fm/user/hamhut1066"><span class="text">Latest Scrobbles</span></a>
+	  <a href="http://www.last.fm/user/hamhut1066" target="_blank"><span class="text">Latest Scrobbles</span></a>
 	  <ul id="scrobbles"></ul>
 	</div>
       </div>

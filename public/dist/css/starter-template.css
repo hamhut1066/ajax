@@ -16,3 +16,10 @@ audio {
     page-break-after:always;
     page-break-inside:avoid;
 }
+.modal .modal-dialog {
+    /* new custom width */
+    width: 1000px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    /* margin-left: -280px; */
+    overflow-y: auto;
+}

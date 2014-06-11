@@ -13,6 +13,18 @@
         //the 404 error function
         return rendermd("content/404.md");
     }
-    function test() { return "test complete"; }
+    function notes() {
+        //create a note type thing!
+        $dirlist = array_diff(scandir(PATH."/content/static"), array('.','..'));
+        $ret = "<div>";
+        $ret = $ret . "<ul class=\"list-group\">";
+        foreach($dirlist as $x) {
+            $ret = $ret . "<li class=\"note list-group-item\">$x</li>";
+        }
+        $ret = $ret . "</ul>";
+        $ret = $ret . "</div>";
+
+        return $ret;
+    }
 
 ?>

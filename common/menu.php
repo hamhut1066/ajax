@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand local" href="/home.md"><?php echo $heading; ?></a>
+          <a class="navbar-brand local" href="/"><?php echo heading; ?></a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -17,7 +17,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a class="local" href="#">Action</a></li>
-                <li><a class="local" href="/notes/work.md">Uni Work</a></li>
+                <li><a class="local" href="/notes#work">Uni Work</a></li>
                 <li class="divider"></li>
               </ul>
             </li>
