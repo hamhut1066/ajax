@@ -2,11 +2,12 @@
 <?php
    #includes up at the top so they are easy to find
    #and global variables
-   define('COMMON', "/srv/ajax/common");
+   //define('COMMON', "/srv/ajax/common");
    require('config.php');
    require('Parsedown.php');
    require('helpers.php');
    ?>
+
 <html lang="en">
   <?php require('header.php'); ?>
   <body>
@@ -28,9 +29,8 @@
 	<div class="col-xs-8">
 	  <span id="content">
 	    <!--the content of the page -->
-	    <?php
-	       echo rendermd($uri);
-	       ?>
+	    <?php require('content.php'); ?>
+        <!--end content -->
 	  </span>
 	</div>
 	<div class="col-xs-2 hidden-print">
