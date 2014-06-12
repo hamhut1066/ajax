@@ -6,13 +6,10 @@ function rendermd($uri) {
     $text = "";
     $result = "";
     try {
-        if (strpos($uri,".") != FALSE){
-            $text = file_get_contents(PATH."/$uri");
-        }
+        if(strpos($uri, '..') !== FALSE) { throw Exception('');};
+        $text = file_get_contents(PATH."/$uri");
         if ($text == "") {throw new Exception("");};
-    }catch (Exception $e) {
-        $text = file_get_contents(PATH."/home.md");
-    }
+    }catch (Exception $e) {}
     $result = Parsedown::instance()->parse($text);
     return $result; #$result;
 }
